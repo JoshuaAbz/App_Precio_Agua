@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Precio_Agua</string>
+    <string name="txtAnuncio">Precios promedio del agua potable</string>
+    <string name="txt_btnAcceder">Acceder</string>
+    <string name="txtNombre1">Obeth Joshua Aburto López</string>
+    <string name="txtNombre2">David Francisco Rodríguez Gálvez</string>
+    <string name="txtAnio">Año</string>
+    <string name="txtMes">Mes</string>
+    <string name="txt_btnMostrar">Mostrar</string>
+    <string name="txtTituloAnio">Año:</string>
+    <string name="txtTituloMes">Mes:</string>
+    <string name="txtTituloResidencial">Residencial:</string>
+    <string name="txtTituloComercial">Comercial:</string>
+    <string name="txtTituloIndustrial">Industrial:</string>
+    <string name="txtTituloGobierno">Goberno:</string>
+    <string name="txtTituloPromNac">Promedio Nacional:</string>
+
+</resources>

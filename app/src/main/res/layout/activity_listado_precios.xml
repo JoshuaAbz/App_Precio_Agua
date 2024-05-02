@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListadoPrecios">
+
+
+    <Spinner
+        android:id="@+id/spinnerYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@id/spinnerMonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAnio" />
+
+    <Spinner
+        android:id="@+id/spinnerMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@id/btnMostrar"
+        app:layout_constraintStart_toEndOf="@id/spinnerYear"
+        app:layout_constraintTop_toBottomOf="@id/txtMes" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#21D13F"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/txt_btnMostrar"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toEndOf="@+id/spinnerMonth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtAnio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/txtAnio"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/txtMes"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTituloAnio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="@string/txtTituloAnio"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloMes"
+        app:layout_constraintEnd_toEndOf="@id/spinnerYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerYear" />
+
+    <TextView
+        android:id="@+id/txtAnio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloAnio"
+        app:layout_constraintStart_toEndOf="@id/txtTituloAnio"
+        app:layout_constraintTop_toTopOf="@id/txtTituloAnio" />
+
+    <TextView
+        android:id="@+id/txtTituloMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTituloMes"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloResidencial"
+        app:layout_constraintEnd_toEndOf="@id/txtTituloAnio"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloAnio" />
+
+    <TextView
+        android:id="@+id/txtMes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloMes"
+        app:layout_constraintStart_toStartOf="@id/txtAnio2"
+        app:layout_constraintTop_toTopOf="@id/txtTituloMes" />
+
+    <TextView
+        android:id="@+id/txtTituloResidencial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTituloResidencial"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloComercial"
+        app:layout_constraintEnd_toEndOf="@id/txtTituloMes"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloMes" />
+
+    <TextView
+        android:id="@+id/txtResidencial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloResidencial"
+        app:layout_constraintStart_toStartOf="@id/txtMes2"
+        app:layout_constraintTop_toTopOf="@id/txtTituloResidencial" />
+
+    <TextView
+        android:id="@+id/txtTituloComercial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTituloComercial"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloIndustrial"
+        app:layout_constraintEnd_toEndOf="@id/txtTituloResidencial"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloResidencial" />
+
+    <TextView
+        android:id="@+id/txtComercial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloComercial"
+        app:layout_constraintStart_toStartOf="@id/txtResidencial"
+        app:layout_constraintTop_toTopOf="@id/txtTituloComercial" />
+
+    <TextView
+        android:id="@+id/txtTituloIndustrial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTituloIndustrial"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloGobierno"
+        app:layout_constraintEnd_toEndOf="@id/txtTituloComercial"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloComercial" />
+
+    <TextView
+        android:id="@+id/txtIndustrial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloIndustrial"
+        app:layout_constraintStart_toStartOf="@id/txtComercial"
+        app:layout_constraintTop_toTopOf="@id/txtTituloIndustrial" />
+
+    <TextView
+        android:id="@+id/txtTituloGobierno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTituloGobierno"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloPromNac"
+        app:layout_constraintEnd_toEndOf="@id/txtTituloIndustrial"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloIndustrial" />
+
+    <TextView
+        android:id="@+id/txtGobierno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloGobierno"
+        app:layout_constraintStart_toStartOf="@id/txtIndustrial"
+        app:layout_constraintTop_toTopOf="@id/txtTituloGobierno" />
+
+    <TextView
+        android:id="@+id/txtTituloPromNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/txtTituloPromNac"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtPomedioNacional"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloGobierno" />
+
+    <TextView
+        android:id="@+id/txtPomedioNacional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtTituloPromNac"
+        app:layout_constraintStart_toEndOf="@id/txtTituloPromNac"
+        app:layout_constraintTop_toTopOf="@id/txtTituloPromNac" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
